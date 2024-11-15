@@ -1,6 +1,6 @@
-from pyfiglet import Figlet
 import random
-import sys
+from pyfiglet import Figlet
+
 
 def main():
     figlet = Figlet()
@@ -21,4 +21,5 @@ def main():
     else:
         sys.exit('error')
 
-main()
+if __name__ == "__main__":
+    main()
