@@ -8,7 +8,8 @@ def main():
 
     if len(sys.argv) == 1:
         text = input("Input: ")
-        figlet.setFont(font = random.choice(font_list))
+        font_used = random.choice(font_list)
+        figlet.setFont(font = font_used)
         print('Output:')
         print(figlet.renderText(text))
 
