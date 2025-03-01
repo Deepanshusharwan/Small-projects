@@ -1,6 +1,6 @@
 import random
 from pyfiglet import Figlet
-
+import sys
 
 def main():
     figlet = Figlet()
@@ -12,6 +12,7 @@ def main():
         figlet.setFont(font = font_used)
         print('Output:')
         print(figlet.renderText(text))
+        
 
     elif sys.argv[1] == '-f' or sys.argv[1] == "--font":
         text = input("Input: ")
