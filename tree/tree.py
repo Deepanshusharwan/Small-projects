@@ -28,7 +28,6 @@ def print_dir(directory,prefix=''):
     return total_directories, total_files
 
 
-
 if len(sys.argv) == 1:
     total_directories, total_files= print_dir('.')
     print("Total directories:", total_directories)
