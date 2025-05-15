@@ -1,19 +1,20 @@
-
-# Python Project Setup and Execution
+# YouTube-Vid-Downloader
 
 This project is a Python application that requires setting up a virtual environment and installing dependencies before running the main application.
 
 ## Prerequisites
 
 Make sure you have the following installed on your system:
+
 - Python 3.x
 - `pip` (Python's package installer)
 - `pipenv` (Python dependency manager)
 
 You can install `pipenv` using the following command:
+
 ```bash
 pip install pipenv
-````
+```
 
 ## Setting Up the Project
 
@@ -29,10 +30,10 @@ Run the `firstrun.sh` script to initialize the virtual environment and install d
 
 **`firstrun.sh` script breakdown:**
 
-* Installs `pipenv` if it's not installed.
-* Creates a virtual environment using `pipenv`.
-* Installs project dependencies as listed in the `Pipfile`.
-* Runs the Python application (`app/main.py`).
+- Installs `pipenv` if it's not installed.
+- Creates a virtual environment using `pipenv`.
+- Installs project dependencies as listed in the `Pipfile`.
+- Runs the Python application (`app/main.py`).
 
 This script will set up everything you need and prepare the environment.
 
@@ -44,25 +45,25 @@ Once the environment is set up, you can run the application using the `run.sh` s
 ./run.sh
 ```
 
+**NOTE:** when running the script in a new terminal you may need to run the 'run.sh' script twice to run the program the first time in any new terminal
+
 **`run.sh` script breakdown:**
 
-* Activates the virtual environment using `pipenv shell`.
-* Installs any missing dependencies using `pipenv install`.
-* Runs the main Python application (`app/main.py`).
+- Activates the virtual environment using `pipenv shell`.
+- Installs any missing dependencies using `pipenv install`.
+- Runs the main Python application (`app/main.py`).
 
 ### 3. Additional Notes
 
-* Ensure that the `Pipfile` and `app/main.py` are in place and contain the correct dependencies and code for the project to work as expected.
-* If you encounter any issues with dependencies, try running `pipenv install` manually to update them.
+- Ensure that the `Pipfile` and `app/main.py` are in place and contain the correct dependencies and code for the project to work as expected.
+- If you encounter any issues with dependencies, try running `pipenv install` manually to update them.
 
 ## Project Structure
-
-Here's a simple structure of the project:
 
 ```
 your-project/
 ├── app/
-│   └── main.py          # Your main Python script
+│   └── main.py          # Main Python script
 ├── Pipfile              # pipenv dependencies file
 ├── Pipfile.lock         # pipenv lock file (auto-generated)
 ├── firstrun.sh          # Script to set up environment
@@ -71,15 +72,14 @@ your-project/
 
 ## Troubleshooting
 
-* **Issue: `pipenv shell` not activating correctly**
+- **Issue: `pipenv shell` not activating correctly**
 
-  * Ensure `pipenv` is installed correctly: `pip install pipenv`.
-  * Try re-running `firstrun.sh` to ensure the environment is created correctly.
+  - Ensure `pipenv` is installed correctly: `pip install pipenv`.
+  - Try re-running `firstrun.sh` to ensure the environment is created correctly.
 
-* **Issue: Missing dependencies**
+- **Issue: Missing dependencies**
 
-  * If dependencies are missing, run `pipenv install` manually to ensure everything is installed.
-
+  - If dependencies are missing, run `pipenv install` manually to ensure everything is installed.
 
 ```
 
@@ -88,6 +88,4 @@ your-project/
 2. **`run.sh`**: Used to run the application once the environment is set up.
 3. **Dependencies**: Managed using `pipenv`.
 
-You can adjust the content to match any further specifics about the project or any additional instructions. Let me know if you need further changes!
 ```
-
