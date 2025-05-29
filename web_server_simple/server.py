@@ -32,7 +32,7 @@ def createServer():
         print("\nShutting down...\n")
 
     except Exception as exc:
-        print(f"ERROR: \n{exc}")
+        print(f"ERROR: \n{exc}")#shows if any exception occurs without crashing the program
 
     serverSocket.close()
 
