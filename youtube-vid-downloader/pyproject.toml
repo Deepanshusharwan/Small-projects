@@ -9,5 +9,6 @@ dependencies = [
     "pipenv>=2025.0.2",
     "pytubefix>=8.13.1",
     "schedule>=1.2.2",
+    "tk>=0.1.0",
     "tqdm>=4.67.1",
 ]

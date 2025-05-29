@@ -8,12 +8,12 @@ Make sure you have the following installed on your system:
 
 - Python 3.x
 - `pip` (Python's package installer)
-- `pipenv` (Python dependency manager)
+- `uv` (Python dependency manager)
 
-You can install `pipenv` using the following command:
+You can install `uv` using the following command:
 
 ```bash
-pip install pipenv
+pip install uv
 ```
 
 ## Setting Up the Project
@@ -30,9 +30,9 @@ Run the `firstrun.sh` script to initialize the virtual environment and install d
 
 **`firstrun.sh` script breakdown:**
 
-- Installs `pipenv` if it's not installed.
-- Creates a virtual environment using `pipenv`.
-- Installs project dependencies as listed in the `Pipfile`.
+- Installs `uv` if it's not installed.
+- Creates a virtual environment using `uv`.
+- Installs project dependencies as listed in the `pyproject.toml`.
 - Runs the Python application (`app/main.py`).
 
 This script will set up everything you need and prepare the environment.
@@ -55,19 +55,27 @@ Once the environment is set up, you can run the application using the `run.sh` s
 
 ### 3. Additional Notes
 
+- **If you are using linux then make sure that you have downloaded the tk module **
+
+```sudo pacman -S tk #use this to download the tk module in arch linux
+
+```
+
 - Ensure that the `Pipfile` and `app/main.py` are in place and contain the correct dependencies and code for the project to work as expected.
 - If you encounter any issues with dependencies, try running `pipenv install` manually to update them.
 
 ## Project Structure
 
 ```
+
 your-project/
 ├── app/
-│   └── main.py          # Main Python script
-├── Pipfile              # pipenv dependencies file
-├── Pipfile.lock         # pipenv lock file (auto-generated)
-├── firstrun.sh          # Script to set up environment
-└── run.sh               # Script to run the application
+│ └── main.py # Main Python script
+├── Pipfile # pipenv dependencies file
+├── Pipfile.lock # pipenv lock file (auto-generated)
+├── firstrun.sh # Script to set up environment
+└── run.sh # Script to run the application
+
 ```
 
 ## Troubleshooting
@@ -84,8 +92,13 @@ your-project/
 ```
 
 ### Key Points:
+
 1. **`firstrun.sh`**: Used for initial setup and environment creation.
 2. **`run.sh`**: Used to run the application once the environment is set up.
 3. **Dependencies**: Managed using `pipenv`.
+
+```
+
+```
 
 ```
