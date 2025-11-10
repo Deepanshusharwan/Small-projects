@@ -1,6 +1,10 @@
 # Song Downloader Script
 
-This Python script allows you to download songs from a specified website (Tidal) using Playwright and Google Chrome. You can either provide the song name directly or use a text file containing song names to download multiple tracks.
+This Python script allows you to download songs from a specified website (Tidal) using Playwright and Google Chrome. You can either provide the song name directly or use a text file containing song names to download multiple tracks. The script supports downloading music in various high-quality formats, including:
+
+- **Hi-Res 16-bit** audio
+- **Hi-Res 24-bit** audio
+- **Lossless audio**
 
 ## Requirements
 
@@ -39,25 +43,34 @@ You can run the script from the command line by specifying the song name or a fi
 
 You can run the script and provide a song name interactively (the script will prompt you for it):
 
-```bash
+````bash
 python download_song.py
-```
 
-#### Option 2: Download Songs from a File
+## Option 2: Download Songs from a File
 
-You can create a text file (e.g., songs.txt) with a list of song names (one per line). Then, you can provide the path to this file:
+You can create a text file (e.g., `songs.txt`) with a list of song names (one per line). Then, you can provide the path to this file:
 
 ```bash
 python download_song.py path/to/songs.txt
-```
+````
 
-Note: Each song name in the text file should be on a separate line. The script will read through the file, download each song, and save it to your default downloads folder.
+**Note: Each song name in the text file should be on a separate line. The script will read through the file, download each song, and save it to your default downloads folder.**
 
-Script Behavior
+## Audio Quality Options
+
+The script allows you to download music in the following audio formats:
+
+- Hi-Res 16-bit: Offers a high-quality audio experience with a bit depth of 16-bit.
+
+* Hi-Res 24-bit: For audiophiles who prefer the best possible quality, this option provides 24-bit depth.
+
+* Lossless Audio: The script downloads lossless audio, meaning no quality loss during compression, for the best sound fidelity.
+
+## Script Behavior
 
 - The script will open a Chromium browser window (not headless) and navigate to the website to search and download the song.
 
-* The song will be saved in your default Downloads folder.
+* The song will be saved in your default Downloads folder in the format you choose (16-bit, 24-bit, or lossless).
 
 * If a song name or file is invalid, the script will notify you with an error message.
 
@@ -65,7 +78,9 @@ Script Behavior
 
 - "File Not Found" Error: Make sure the file path to the text file is correct if you're using a text file.
 
-* Missing Google Chrome: If you get errors related to Chrome not being found, ensure Google Chrome is installed on your system.
+- Missing Google Chrome: If you get errors related to Chrome not being found, ensure Google Chrome is installed on your system.
+
+- Audio Quality Issues: Ensure that the song you are trying to download is available in the desired quality (Hi-Res 16-bit, Hi-Res 24-bit, or Lossless). If not, the script may default to a lower quality.
 
 ## License
 
@@ -75,13 +90,3 @@ This script is released under the MIT License.
 
 Feel free to fork the repository, submit issues, and send pull requests. Contributions are welcome!
 
-
-### Explanation:
-
-- **Requirements**: Added the note about needing Google Chrome.
-- **Installation**: Instructions for installing Playwright and Google Chrome.
-- **Usage**: Clear instructions on how to run the script either interactively or with a file containing multiple song names.
-- **Troubleshooting**: Common issues like file not found or missing Google Chrome are addressed.
-- **License and Contributing**: Basic sections if you want to open-source the project. You can modify or add your preferred license.
-
-Let me know if you need anything else!
