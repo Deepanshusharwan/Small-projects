@@ -10,7 +10,7 @@ def convert_to_ascii(image, downscale, output_name):
     w,h = img.size
 
     #resize big images
-    img.resize((h//downscale,w//downscale)).save(f"{image_name}_downscale.{type}")
+    img.resize((w//downscale,h//downscale)).save(f"{image_name}_downscale.{type}")
     ascii_grid = []
     ascii_chars = "@%#*+=-:. "
 
