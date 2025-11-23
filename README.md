@@ -128,3 +128,15 @@ This repository is a collection of various small projects, ranging from simple s
   - Uses `on_progress_callback` and `on_complete_callback` to handle progress updates and completion.
 
 **Note**: Requires `pytubefix`, `tkinter`, and `tqdm` libraries.
+
+---
+
+### 🎨 `image-to-ascii`
+
+- **Purpose**: Converts an image file into ASCII art.
+- **Functionality**: Takes an image, converts pixels to ASCII characters based on brightness, and saves the result to a text file. Supports optional image downscaling.
+- **Dependencies**: `Pillow`.
+- **Main Features**:
+  - Interactive mode for guided input.
+  - Command-line arguments for quick execution.
+- **Use Case**: Generating creative text-based representations of images.
